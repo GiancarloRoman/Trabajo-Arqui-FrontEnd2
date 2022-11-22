@@ -47,5 +47,11 @@ export class CarritoComprasService {
     }
     return EMPTY;
   }
+    reporte() {
+    return this.http.get<Cliente[]>(`${this.url}/buscardominio`);
+  }
+  clientefrecuente() {
+    return this.http.get<ClienteFrecuente[]>(`${this.url}/clientefrecuente`);
+  }
 }
 
