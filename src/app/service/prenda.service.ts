@@ -51,5 +51,15 @@ export class PrendaService {
     }
     return EMPTY;
   }
+  reportemayor() {
+    return this.http.get<Mayor[]>(`${this.url}/buscarmayor`);
+  }
+  reportemenor() {
+    return this.http.get<Menor[]>(`${this.url}/buscarmenor`);
+  }
 
+  reportemarca() {
+    return this.http.get<PrendaMarca[]>(`${this.url}/PrendaXmarca`);
+  }
 }
+
