@@ -52,5 +52,11 @@ export class ComprobantePagoService {
     }
     return EMPTY;
   }
+   comprobantefecha() {
+    return this.http.get<ComprobanteFecha[]>(`${this.url}/comprobantefecha`);
+  }
+
+  comprobantemonto() {
+    return this.http.get<ComprobanteMonto[]>(`${this.url}/comprobantemonto`);
+  }
 }
-x
